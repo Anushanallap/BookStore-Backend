@@ -38,13 +38,6 @@ public class UserController {
 
     }
 
-//    @GetMapping("/useremail/{emailId}")
-//    public ResponseEntity<ResponseDTO> getUserByEmailId(@PathVariable("emailId") String emailId) {
-//        return new ResponseEntity<ResponseDTO>( new
-//                ResponseDTO("Get Call By Id Success",
-//                userService.getUserByEmailId(emailId)), HttpStatus.OK);
-//    }
-
     @PostMapping("/adduser")
     ResponseEntity<Response> addUser(@RequestBody UserDTO userDTO){
         Response response = userService.addUser(userDTO);
